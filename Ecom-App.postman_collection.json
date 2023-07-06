@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "f1a30f23-7210-40d2-8e84-b2a17b3eb908",
+		"name": "Ecom-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28291588"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Craete Product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Catagory",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "totalsales",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "orser count",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"akshay\",\r\n    \"email\":\"akshay1@gmail.com\",\r\n    \"password\":\"12345qwerty\",\r\n    \"phone\":\"8767997707\",\r\n    \"isAdmin\": false,\r\n    \"street\": \"banglore\",\r\n    \"apartment\": \"home\",\r\n    \"zip\": \"102010\",\r\n    \"city\": \"banglore\",\r\n    \"country\": \"India\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"akshay\",\r\n    \"email\":\"akshay1@gmail.com\",\r\n    \"password\":\"12345qwerty\",\r\n    \"phone\":\"8767997707\",\r\n    \"isAdmin\": false,\r\n    \"street\": \"banglore\",\r\n    \"apartment\": \"home\",\r\n    \"zip\": \"102010\",\r\n    \"city\": \"banglore\",\r\n    \"country\": \"India\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user count",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
