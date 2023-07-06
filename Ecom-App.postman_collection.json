@@ -12,8 +12,67 @@
 				{
 					"name": "Craete Product",
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGE2ZGYwNjdmZDY2YzM5NjhmOTY3YWMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODg2NTgxODcsImV4cCI6MTY4ODc0NDU4N30._I6OeJomMm8GmEdoteD4iF74TG626zwN_WYz0ZAtNGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "product2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "desc3",
+									"type": "text"
+								},
+								{
+									"key": "richDescription",
+									"value": "rich1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/aksha/Music/Akshay Phone/Picsart/images (2).jpeg"
+								},
+								{
+									"key": "category",
+									"value": "64a6e2c530fdaa19bc8ab956",
+									"type": "text"
+								},
+								{
+									"key": "countInStock",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								""
+							]
+						}
 					},
 					"response": []
 				}
@@ -25,8 +84,40 @@
 				{
 					"name": "Create",
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGE2ZGYwNjdmZDY2YzM5NjhmOTY3YWMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODg2NTgxODcsImV4cCI6MTY4ODc0NDU4N30._I6OeJomMm8GmEdoteD4iF74TG626zwN_WYz0ZAtNGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"cat1\",\r\n    \"icon\":\"menu-bar-1\",\r\n    \"color\":\"green\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
 					},
 					"response": []
 				}
@@ -38,16 +129,64 @@
 				{
 					"name": "Create",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderItems\":[\r\n        {\r\n        \"quantity\":3,\r\n        \"product\":\"64a6e35151041d3f98e865c2\"\r\n        },\r\n         {\r\n        \"quantity\":5,\r\n        \"product\":\"64a6e49236444e56cccaedcf\"\r\n        }\r\n    ],\r\n    \"shippingAddress1\":\"home 1\",\r\n    \"shippingAddress2\":\"home 2\",\r\n    \"city\":\"banglore\",\r\n    \"zip\":\"0000\",\r\n    \"country\":\"india\",\r\n    \"phone\":\"8767997705\",\r\n    \"user\": \"62137a3358e91606f608aa17\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/orders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								""
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "totalsales",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGE2ZGYwNjdmZDY2YzM5NjhmOTY3YWMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODg2NTgxODcsImV4cCI6MTY4ODc0NDU4N30._I6OeJomMm8GmEdoteD4iF74TG626zwN_WYz0ZAtNGU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/orders/get/totalsales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"get",
+								"totalsales"
+							]
+						}
 					},
 					"response": []
 				},
@@ -55,7 +194,22 @@
 					"name": "orser count",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/orders/get/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"get",
+								"count"
+							]
+						}
 					},
 					"response": []
 				}
@@ -68,7 +222,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"akshay\",\r\n    \"email\":\"akshay1@gmail.com\",\r\n    \"password\":\"12345qwerty\",\r\n    \"phone\":\"8767997707\",\r\n    \"isAdmin\": false,\r\n    \"street\": \"banglore\",\r\n    \"apartment\": \"home\",\r\n    \"zip\": \"102010\",\r\n    \"city\": \"banglore\",\r\n    \"country\": \"India\"\r\n\r\n}",
+					"raw": "{\r\n    \"name\":\"akshay2\",\r\n    \"email\":\"akshay2@gmail.com\",\r\n    \"password\":\"12345qwerty\",\r\n    \"phone\":\"8767997707\",\r\n    \"isAdmin\": false,\r\n    \"street\": \"banglore\",\r\n    \"apartment\": \"home\",\r\n    \"zip\": \"102010\",\r\n    \"city\": \"banglore\",\r\n    \"country\": \"India\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -76,7 +230,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/users",
+					"raw": "http://localhost:3000/api/v1/users/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -85,7 +239,8 @@
 					"path": [
 						"api",
 						"v1",
-						"users"
+						"users",
+						"register"
 					]
 				}
 			},
@@ -106,7 +261,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/users",
+					"raw": "http://localhost:3000/api/v1/users/login",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -115,7 +270,8 @@
 					"path": [
 						"api",
 						"v1",
-						"users"
+						"users",
+						"login"
 					]
 				}
 			},
@@ -124,8 +280,39 @@
 		{
 			"name": "get user count",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGE2ZGYwNjdmZDY2YzM5NjhmOTY3YWMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODg2NTgxODcsImV4cCI6MTY4ODc0NDU4N30._I6OeJomMm8GmEdoteD4iF74TG626zwN_WYz0ZAtNGU",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "Bearer",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGE2ZGYwNjdmZDY2YzM5NjhmOTY3YWMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODg2NTgwMjcsImV4cCI6MTY4ODc0NDQyN30.2CU3ffrqci1sDnIps8fqy7umvouQGJtaSKwWh-acOc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/get/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"get",
+						"count"
+					]
+				}
 			},
 			"response": []
 		}
